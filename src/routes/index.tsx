@@ -102,7 +102,7 @@ function PortfolioPage() {
                   <div className="text-center"><div className="mx-auto mb-5 grid h-32 w-32 place-items-center rounded-full bg-coral text-5xl font-display font-extrabold text-coral-foreground">J</div><p className="font-display text-2xl font-bold">Portrait placeholder</p><p className="mt-2 text-sm text-muted-foreground">Add Jaisimha&apos;s professional photo</p></div>
                 </div>
               </div>
-              <div className="absolute -bottom-5 -right-2 rounded-full border-2 border-foreground bg-background px-5 py-4 font-display text-sm font-bold md:right-8">Amberpet · Hyderabad</div>
+              <div className="absolute -bottom-5 -right-2 rounded-full border-2 border-foreground bg-background px-5 py-4 font-display text-sm font-bold md:right-8">VMR Graphics · Amberpet</div>
             </div>
           </div>
           <div className="mt-20 border-y border-foreground/20 py-5"><div className="flex flex-wrap gap-x-8 gap-y-3 text-xs font-bold uppercase text-muted-foreground">{["Product Design", "Packaging Design", "Label Design", "Logo & Branding", "Print Design"].map((item) => <span key={item}>✦ {item}</span>)}</div></div>
