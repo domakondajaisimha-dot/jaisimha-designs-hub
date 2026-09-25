@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { FormEvent, useState } from "react";
 
+import jaisimhaPhoto from "@/assets/jaisimha-photo.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -97,10 +98,8 @@ function PortfolioPage() {
             </div>
             <div className="relative mx-auto w-full max-w-xl animate-float">
               <div className="absolute -left-3 top-8 z-10 bg-lime px-4 py-3 text-xs font-extrabold uppercase shadow-[6px_6px_0_var(--ink)]">3+ years<br />professional experience</div>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border-2 border-foreground bg-lime p-5 shadow-[14px_14px_0_var(--ink)]">
-                <div className="grid h-full place-items-center overflow-hidden rounded-[1.3rem] border border-dashed border-foreground/40 bg-background/80">
-                  <div className="text-center"><div className="mx-auto mb-5 grid h-32 w-32 place-items-center rounded-full bg-coral text-5xl font-display font-extrabold text-coral-foreground">J</div><p className="font-display text-2xl font-bold">Portrait placeholder</p><p className="mt-2 text-sm text-muted-foreground">Add Jaisimha&apos;s professional photo</p></div>
-                </div>
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border-2 border-foreground bg-lime p-4 shadow-[14px_14px_0_var(--ink)]">
+                <img src={jaisimhaPhoto.url} alt="Jaisimha, Product Designer and Graphic Designer" width={573} height={800} className="h-full w-full rounded-[1.3rem] object-cover object-top" />
               </div>
               <div className="absolute -bottom-5 -right-2 rounded-full border-2 border-foreground bg-background px-5 py-4 font-display text-sm font-bold md:right-8">VMR Graphics · Amberpet</div>
             </div>
