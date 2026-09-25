@@ -86,8 +86,8 @@ function PortfolioPage() {
           <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="animate-rise">
               <div className="mb-8 flex items-center gap-3 text-xs font-bold uppercase"><span className="h-2 w-2 rounded-full bg-lime" /> Available for creative projects</div>
-              <p className="mb-3 font-display text-lg font-bold text-coral md:text-2xl">Product Designer & Graphic Designer</p>
-              <h1 className="font-display text-6xl font-extrabold leading-[0.88] md:text-8xl lg:text-[8.5rem]">Jai<br /><span className="text-cobalt">simha.</span></h1>
+              <p className="mb-3 text-lg font-semibold md:text-2xl">Product Designer & <span className="font-editorial text-3xl italic text-coral md:text-4xl">Graphic Designer</span></p>
+              <h1 className="font-display text-6xl font-extrabold leading-[0.88] md:text-8xl lg:text-[8.5rem]">Jai<br /><span className="text-coral">simha.</span></h1>
               <p className="mt-8 max-w-2xl text-xl font-semibold leading-snug md:text-3xl">Creative product and graphic design for packaging, labels, brands, and print.</p>
               <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground">I combine hands-on production experience with clear visual thinking to create identities and print-ready designs that work for real businesses.</p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -97,8 +97,8 @@ function PortfolioPage() {
             </div>
             <div className="relative mx-auto w-full max-w-xl animate-float">
               <div className="absolute -left-3 top-8 z-10 bg-lime px-4 py-3 text-xs font-extrabold uppercase shadow-[6px_6px_0_var(--ink)]">3+ years<br />professional experience</div>
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border-2 border-foreground bg-secondary p-5 shadow-[14px_14px_0_var(--cobalt)]">
-                <div className="grid h-full place-items-center overflow-hidden rounded-[1.3rem] border border-dashed border-foreground/40 bg-card">
+              <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] border-2 border-foreground bg-lime p-5 shadow-[14px_14px_0_var(--ink)]">
+                <div className="grid h-full place-items-center overflow-hidden rounded-[1.3rem] border border-dashed border-foreground/40 bg-background/80">
                   <div className="text-center"><div className="mx-auto mb-5 grid h-32 w-32 place-items-center rounded-full bg-coral text-5xl font-display font-extrabold text-coral-foreground">J</div><p className="font-display text-2xl font-bold">Portrait placeholder</p><p className="mt-2 text-sm text-muted-foreground">Add Jaisimha&apos;s professional photo</p></div>
                 </div>
               </div>
@@ -122,7 +122,7 @@ function PortfolioPage() {
 
         <section id="portfolio" className="bg-card py-24 lg:py-32">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10">
-            <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]"><SectionLabel number="03" label="Selected work" /><div><h2 className="font-display text-5xl font-bold md:text-7xl">Work that speaks<br /><span className="text-cobalt">before words do.</span></h2><p className="mt-5 max-w-lg text-muted-foreground">Portfolio image spaces are ready for Jaisimha&apos;s original design work.</p></div></div>
+            <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]"><SectionLabel number="03" label="Selected work" /><div><h2 className="font-display text-5xl font-bold md:text-7xl">Work that speaks<br /><span className="font-editorial italic text-coral">before words do.</span></h2><p className="mt-5 max-w-lg text-muted-foreground">Portfolio image spaces are ready for Jaisimha&apos;s original design work.</p></div></div>
             <div className="mt-12 flex flex-wrap gap-2">{["All", "Packaging", "Labels", "Branding", "Print", "Marketing"].map((item) => <Button key={item} variant={filter === item ? "default" : "outline"} onClick={() => setFilter(item)} className="rounded-full shadow-none">{item}</Button>)}</div>
             <div className="mt-10 grid items-start gap-6 md:grid-cols-2 lg:grid-cols-3">{visibleProjects.map((project, index) => <article key={project.title} className={cn("group", index % 3 === 1 && "lg:mt-16")}><div className={cn("relative overflow-hidden rounded-lg border border-foreground/15", project.shape, project.tone)}><div className="absolute inset-5 grid place-items-center rounded-md border border-dashed border-background/60 bg-background/10 p-6 text-center"><div><Printer className="mx-auto mb-4 h-8 w-8 text-background" /><p className={cn("font-display text-lg font-bold", project.tone === "bg-lime" ? "text-lime-foreground" : "text-background")}>Project image placeholder</p><p className={cn("mt-1 text-xs", project.tone === "bg-lime" ? "text-lime-foreground/70" : "text-background/70")}>Replace with original artwork</p></div></div></div><div className="mt-5 flex items-start justify-between gap-4"><div><p className="text-xs font-bold uppercase text-coral">{project.category}</p><h3 className="mt-1 font-display text-2xl font-bold">{project.title}</h3><p className="mt-2 max-w-sm text-sm leading-6 text-muted-foreground">{project.text}</p></div><span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-foreground transition-colors group-hover:bg-foreground group-hover:text-background"><ArrowDownRight className="h-4 w-4" /></span></div></article>)}</div>
           </div>
