@@ -9,7 +9,6 @@ import {
   Menu,
   Palette,
   PenTool,
-  Printer,
   Sparkles,
   X,
 } from "lucide-react";
@@ -19,6 +18,7 @@ import jaisimhaPhoto from "@/assets/jaisimha-photo.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { portfolioImages } from "@/lib/portfolio-assets";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({
@@ -47,12 +47,30 @@ const services = [
 ];
 
 const projects = [
-  { title: "Product Packaging", category: "Packaging", text: "Complete label, pack, logo, and print artwork presentation.", tone: "bg-coral", shape: "aspect-[4/5]" },
-  { title: "Label System", category: "Labels", text: "A clear, flexible visual system for product variants.", tone: "bg-cobalt", shape: "aspect-[4/3]" },
-  { title: "Brand Identity", category: "Branding", text: "Logo and practical brand touchpoints for everyday use.", tone: "bg-lime", shape: "aspect-square" },
-  { title: "Business Stationery", category: "Print", text: "Visiting card and print-ready business materials.", tone: "bg-ink", shape: "aspect-[4/3]" },
-  { title: "Campaign Flyer", category: "Marketing", text: "Promotional layout with confident hierarchy and calls to action.", tone: "bg-cobalt", shape: "aspect-[4/5]" },
-  { title: "Promotional Poster", category: "Marketing", text: "High-impact poster composition for commercial communication.", tone: "bg-coral", shape: "aspect-square" },
+  { title: "Trishul", category: "Packaging", text: "Product packaging and print artwork.", image: portfolioImages.trishul },
+  { title: "Black Tiger 5G", category: "Packaging", text: "Bold retail packaging with a high-impact visual identity.", image: portfolioImages.blackTiger },
+  { title: "Product Marketing Brochure", category: "Print", text: "Product-led brochure design with a clear information structure.", image: portfolioImages.productMarketing },
+  { title: "Dare", category: "Packaging", text: "Contemporary agricultural product packaging.", image: portfolioImages.dare },
+  { title: "Asian Edits & Creations", category: "Branding", text: "Logo identity for a creative editing studio.", image: portfolioImages.asianEdits },
+  { title: "VE Series", category: "Print", text: "Commercial product brochure and promotional layout.", image: portfolioImages.veSeries },
+  { title: "Anchor", category: "Packaging", text: "Clean, structured product packaging artwork.", image: portfolioImages.anchor },
+  { title: "Party Popcorn", category: "Packaging", text: "Playful consumer packaging for a popcorn product.", image: portfolioImages.partyPopcorn },
+  { title: "Dhost", category: "Packaging", text: "Distinctive agricultural product packaging.", image: portfolioImages.dhost },
+  { title: "Leader", category: "Packaging", text: "Premium product packaging and label presentation.", image: portfolioImages.leader },
+  { title: "Akshara Waterproofing", category: "Branding", text: "Service brand logo with a recognizable visual mark.", image: portfolioImages.akshara },
+  { title: "Maha Bharat Agri Tech", category: "Branding", text: "Agricultural business logo and identity concept.", image: portfolioImages.mahaBharat },
+  { title: "Agrivital", category: "Print", text: "Informative agricultural product brochure.", image: portfolioImages.agrivital },
+  { title: "Bio Bloom-K", category: "Print", text: "Detailed product brochure and print layout.", image: portfolioImages.bioBloom },
+  { title: "Wheel & Tire Cleaner", category: "Marketing", text: "Retail advertising artwork for an automotive care product.", image: portfolioImages.wheelTire },
+  { title: "Dashboard Shine", category: "Marketing", text: "Promotional poster for an automotive care product.", image: portfolioImages.dashboardShine },
+  { title: "Sankranti Creative", category: "Marketing", text: "Festive social media and promotional artwork.", image: portfolioImages.sankranti },
+  { title: "VMR New Year", category: "Marketing", text: "Celebratory New Year promotional creative.", image: portfolioImages.vmrNewYear },
+  { title: "Rasis Purple", category: "Labels", text: "Illustrated product label and bottle presentation.", image: portfolioImages.rasisPurple },
+  { title: "Rasis Orange", category: "Labels", text: "Illustrated product label and bottle presentation.", image: portfolioImages.rasisOrange },
+  { title: "Supari Gold", category: "Labels", text: "Bright, shelf-ready bottle label design.", image: portfolioImages.supariGold },
+  { title: "Seven Star", category: "Packaging", text: "Colorful retail carton packaging artwork.", image: portfolioImages.sevenStar },
+  { title: "EX-CITE", category: "Labels", text: "Product label shown in a polished promotional setting.", image: portfolioImages.exCite },
+  { title: "Coco Nutrimax", category: "Labels", text: "Modern agricultural product label and container design.", image: portfolioImages.cocoNutrimax },
 ];
 
 const skills = ["Product Design", "Packaging Design", "Label Design", "Logo Design", "Branding", "Visiting Card Design", "Brochure Design", "Flyer Design", "Poster Design", "Print Design", "Portfolio Prompt Creation"];
@@ -123,14 +141,14 @@ function PortfolioPage() {
           <div className="mx-auto max-w-[1440px] px-5 md:px-10">
             <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]"><SectionLabel number="03" label="Selected work" /><div><h2 className="font-display text-5xl font-bold md:text-7xl">Work that speaks<br /><span className="font-editorial italic text-coral">before words do.</span></h2><p className="mt-5 max-w-lg text-muted-foreground">Portfolio image spaces are ready for Jaisimha&apos;s original design work.</p></div></div>
             <div className="mt-12 flex flex-wrap gap-2">{["All", "Packaging", "Labels", "Branding", "Print", "Marketing"].map((item) => <Button key={item} variant={filter === item ? "default" : "outline"} onClick={() => setFilter(item)} className="rounded-full shadow-none">{item}</Button>)}</div>
-            <div className="mt-10 grid items-start gap-6 md:grid-cols-2 lg:grid-cols-3">{visibleProjects.map((project, index) => <article key={project.title} className={cn("group", index % 3 === 1 && "lg:mt-16")}><div className={cn("relative overflow-hidden rounded-lg border border-foreground/15", project.shape, project.tone)}><div className="absolute inset-5 grid place-items-center rounded-md border border-dashed border-background/60 bg-background/10 p-6 text-center"><div><Printer className="mx-auto mb-4 h-8 w-8 text-background" /><p className={cn("font-display text-lg font-bold", project.tone === "bg-lime" ? "text-lime-foreground" : "text-background")}>Project image placeholder</p><p className={cn("mt-1 text-xs", project.tone === "bg-lime" ? "text-lime-foreground/70" : "text-background/70")}>Replace with original artwork</p></div></div></div><div className="mt-5 flex items-start justify-between gap-4"><div><p className="text-xs font-bold uppercase text-coral">{project.category}</p><h3 className="mt-1 font-display text-2xl font-bold">{project.title}</h3><p className="mt-2 max-w-sm text-sm leading-6 text-muted-foreground">{project.text}</p></div><span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-foreground transition-colors group-hover:bg-foreground group-hover:text-background"><ArrowDownRight className="h-4 w-4" /></span></div></article>)}</div>
+            <div className="mt-10 grid items-start gap-6 md:grid-cols-2 lg:grid-cols-3">{visibleProjects.map((project, index) => <article key={project.title} className={cn("group", index % 3 === 1 && "lg:mt-16")}><div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-foreground/15 bg-background"><img src={project.image} alt={`${project.title} design project`} loading="lazy" decoding="async" sizes="(min-width: 1024px) 31vw, (min-width: 768px) 46vw, 92vw" className="h-full w-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.03]" /></div><div className="mt-5 flex items-start justify-between gap-4"><div><p className="text-xs font-bold uppercase text-coral">{project.category}</p><h3 className="mt-1 font-display text-2xl font-bold">{project.title}</h3><p className="mt-2 max-w-sm text-sm leading-6 text-muted-foreground">{project.text}</p></div><span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-foreground transition-colors group-hover:bg-foreground group-hover:text-background"><ArrowDownRight className="h-4 w-4" /></span></div></article>)}</div>
           </div>
         </section>
 
         <section className="bg-cobalt text-cobalt-foreground">
           <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:py-32">
             <div className="flex flex-wrap items-end justify-between gap-6"><div><p className="text-xs font-bold uppercase text-lime">Featured case study · Product Packaging</p><h2 className="mt-4 max-w-4xl font-display text-4xl font-bold leading-tight md:text-7xl">From product idea to a complete shelf-ready identity.</h2></div><span className="font-display text-7xl font-bold text-cobalt-foreground/15">01</span></div>
-            <div className="mt-14 grid gap-5 lg:grid-cols-[1.35fr_0.65fr]"><PlaceholderPanel label="Main packaging mockup" className="min-h-[420px] lg:min-h-[620px]" /><div className="grid gap-5"><PlaceholderPanel label="Label detail" className="min-h-64" /><PlaceholderPanel label="Print artwork" className="min-h-64" /></div></div>
+            <div className="mt-14 grid gap-5 lg:grid-cols-[1.35fr_0.65fr]"><CaseStudyImage src={portfolioImages.trishul} alt="Trishul product packaging" className="min-h-[420px] lg:min-h-[620px]" /><div className="grid gap-5"><CaseStudyImage src={portfolioImages.bioBloom} alt="Bio Bloom-K label and brochure detail" className="min-h-64" /><CaseStudyImage src={portfolioImages.productMarketing} alt="Product marketing print artwork" className="min-h-64" /></div></div>
             <div className="mt-14 grid gap-10 border-t border-cobalt-foreground/25 pt-10 md:grid-cols-3"><CaseDetail label="Project overview" text="Product packaging design created for a local business." /><CaseDetail label="My role" text="Product Designer & Graphic Designer" /><CaseDetail label="Design work" text="Product label · Packaging · Logo · Print artwork" /></div>
           </div>
         </section>
@@ -156,7 +174,7 @@ function PortfolioPage() {
 }
 
 function SectionLabel({ number, label, inverse = false }: { number: string; label: string; inverse?: boolean }) { return <div className={cn("flex h-fit items-center gap-3 border-t pt-4 text-xs font-bold uppercase", inverse ? "border-background/30 text-background/60" : "border-foreground/30 text-muted-foreground")}><span className={inverse ? "text-lime" : "text-coral"}>{number}</span><span>{label}</span></div>; }
-function PlaceholderPanel({ label, className }: { label: string; className?: string }) { return <div className={cn("grid place-items-center rounded-lg border border-dashed border-cobalt-foreground/50 bg-cobalt-foreground/10 p-6 text-center", className)}><div><Printer className="mx-auto mb-4 h-9 w-9" /><p className="font-display text-xl font-bold">{label}</p><p className="mt-1 text-xs text-cobalt-foreground/65">Original project image placeholder</p></div></div>; }
+function CaseStudyImage({ src, alt, className }: { src: string; alt: string; className?: string }) { return <div className={cn("overflow-hidden rounded-lg border border-cobalt-foreground/30 bg-background", className)}><img src={src} alt={alt} loading="lazy" decoding="async" sizes="(min-width: 1024px) 60vw, 92vw" className="h-full w-full object-contain p-4" /></div>; }
 function CaseDetail({ label, text }: { label: string; text: string }) { return <div><p className="text-xs font-bold uppercase text-lime">{label}</p><p className="mt-3 text-base leading-7 text-cobalt-foreground/80">{text}</p></div>; }
 function ContactLine({ label, value }: { label: string; value: string }) { return <div className="grid grid-cols-[5rem_1fr] gap-4 border-b border-background/15 pb-4"><span className="text-background/45">{label}</span><span className="font-semibold">[{value}]</span></div>; }
 function FormField({ label, children }: { label: string; children: React.ReactNode }) { return <label className="mb-5 block"><span className="mb-2 block text-xs font-bold uppercase text-background/60">{label}</span>{children}</label>; }
