@@ -20,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { portfolioImages } from "@/lib/portfolio-assets";
 import { cn } from "@/lib/utils";
+import { CaseStudyGenerator } from "@/components/CaseStudyGenerator";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -136,6 +137,8 @@ function PortfolioPage() {
           <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]"><SectionLabel number="02" label="Services" /><div><h2 className="max-w-3xl font-display text-4xl font-bold leading-tight md:text-6xl">Design support from <span className="text-coral">shelf</span> to <span className="text-cobalt">street.</span></h2><p className="mt-5 max-w-xl text-muted-foreground">Focused visual design services for businesses that need to look clear, credible, and memorable.</p></div></div>
           <div className="mt-16 grid border-l border-t border-foreground/20 md:grid-cols-2 lg:grid-cols-3">{services.map((service, index) => { const Icon = service.icon; return <article key={service.title} className="group min-h-72 border-b border-r border-foreground/20 bg-background p-7 transition-all duration-300 hover:bg-card hover:-translate-y-1"><div className="flex items-start justify-between"><span className="font-display text-sm font-bold text-muted-foreground">0{index + 1}</span><Icon className="h-7 w-7 text-coral transition-transform group-hover:rotate-6 group-hover:scale-110" /></div><h3 className="mt-16 font-display text-2xl font-bold">{service.title}</h3><p className="mt-4 text-sm leading-6 text-muted-foreground">{service.text}</p></article>; })}</div>
         </section>
+
+        <CaseStudyGenerator />
 
         <section id="portfolio" className="bg-card py-24 lg:py-32">
           <div className="mx-auto max-w-[1440px] px-5 md:px-10">
