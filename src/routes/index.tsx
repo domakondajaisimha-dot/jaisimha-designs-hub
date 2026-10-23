@@ -58,7 +58,7 @@ const projects = [
   { title: "Party Popcorn", category: "Packaging", text: "Playful consumer packaging for a popcorn product.", image: portfolioImages.partyPopcorn },
   { title: "Dhost", category: "Packaging", text: "Distinctive agricultural product packaging.", image: portfolioImages.dhost },
   { title: "Leader", category: "Packaging", text: "Premium product packaging and label presentation.", image: portfolioImages.leader },
-  { title: "Akshara Waterproofing", category: "Branding", text: "Service brand logo with a recognizable visual mark.", image: portfolioImages.akshara },
+  { title: "Akshara Waterproofing", category: "Branding", text: "Service brand logo with a recognizable visual mark.", image: portfolioImages.aksharaV2 },
   { title: "Maha Bharat Agri Tech", category: "Branding", text: "Agricultural business logo and identity concept.", image: portfolioImages.mahaBharat },
   { title: "Agrivital", category: "Print", text: "Informative agricultural product brochure.", image: portfolioImages.agrivital },
   { title: "Bio Bloom-K", category: "Print", text: "Detailed product brochure and print layout.", image: portfolioImages.bioBloom },
@@ -72,6 +72,14 @@ const projects = [
   { title: "Seven Star", category: "Packaging", text: "Colorful retail carton packaging artwork.", image: portfolioImages.sevenStar },
   { title: "EX-CITE", category: "Labels", text: "Product label shown in a polished promotional setting.", image: portfolioImages.exCite },
   { title: "Coco Nutrimax", category: "Labels", text: "Modern agricultural product label and container design.", image: portfolioImages.cocoNutrimax },
+  { title: "Prinstan Agri Care", category: "Print", text: "Tri-fold agricultural company brochure.", image: portfolioImages.prinstan },
+  { title: "Synergy Biological", category: "Print", text: "Fresh, produce-led brochure for a biological product range.", image: portfolioImages.synergy },
+  { title: "Green Chemical & Fertilizer", category: "Print", text: "Light brochure layout with drone and crop imagery.", image: portfolioImages.greenLight },
+  { title: "Green Chemical & Fertilizer — Dark", category: "Print", text: "Dark, dramatic brochure edition for the same brand.", image: portfolioImages.greenDark },
+  { title: "Leader Fungicide", category: "Packaging", text: "Bold pouch packaging for a contact fungicide.", image: portfolioImages.leaderFungicide },
+  { title: "Propose", category: "Labels", text: "Insecticide bottle label with vivid crop artwork.", image: portfolioImages.propose },
+  { title: "Chloro-505", category: "Labels", text: "Insecticide bottle label with clean green styling.", image: portfolioImages.chloro },
+  { title: "FIP-5", category: "Labels", text: "Purple insecticide bottle label with crop grid.", image: portfolioImages.fip5 },
 ];
 
 const skills = ["Product Design", "Packaging Design", "Label Design", "Logo Design", "Branding", "Visiting Card Design", "Brochure Design", "Flyer Design", "Poster Design", "Print Design", "Portfolio Prompt Creation"];
