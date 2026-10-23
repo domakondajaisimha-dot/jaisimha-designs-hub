@@ -1,3 +1,12 @@
+import aksharaV2 from "@/assets/portfolio/akshara-logo-v2.webp.asset.json";
+import prinstan from "@/assets/portfolio/prinstan-brochure.webp.asset.json";
+import synergy from "@/assets/portfolio/synergy-biological-brochure.webp.asset.json";
+import greenLight from "@/assets/portfolio/green-chemical-brochure-light.webp.asset.json";
+import greenDark from "@/assets/portfolio/green-chemical-brochure-dark.webp.asset.json";
+import leaderFungicide from "@/assets/portfolio/leader-fungicide-packaging.webp.asset.json";
+import propose from "@/assets/portfolio/propose-insecticide.webp.asset.json";
+import chloro from "@/assets/portfolio/chloro-505-insecticide.webp.asset.json";
+import fip5 from "@/assets/portfolio/fip-5-insecticide.webp.asset.json";
 import agrivital from "@/assets/portfolio/agrivital-brochure.webp.asset.json";
 import akshara from "@/assets/portfolio/akshara-waterproofing-logo.webp.asset.json";
 import anchor from "@/assets/portfolio/anchor-product-packaging.webp.asset.json";
@@ -48,4 +57,13 @@ export const portfolioImages = {
   veSeries: veSeries.url,
   vmrNewYear: vmrNewYear.url,
   wheelTire: wheelTire.url,
+  aksharaV2: aksharaV2.url,
+  prinstan: prinstan.url,
+  synergy: synergy.url,
+  greenLight: greenLight.url,
+  greenDark: greenDark.url,
+  leaderFungicide: leaderFungicide.url,
+  propose: propose.url,
+  chloro: chloro.url,
+  fip5: fip5.url,
 } as const;
